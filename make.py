@@ -11,6 +11,7 @@ INCLUDE = [PYTHON_INCLUDE]
 
 
 def main():
+
     ll_path = compile_cython_to_llvmir("objective_function.pyx")
     api = extract_public_api_from_pxd(ll_path.with_suffix(".pxd"))
 
@@ -80,8 +81,7 @@ def process_llvm(ll_path, api):
 
     Args:
         ll_path (str): The path to the LLVM IR file to process.
-        api (list): A list of tuples, where each tuple contains the name,
-        parameter types, and return type of a function.
+        api (list): See return type of `extract_public_api_from_pxd()`
 
     Returns:
         None
