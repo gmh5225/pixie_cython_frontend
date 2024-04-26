@@ -2,3 +2,8 @@
 envs/
 # python cache
 *.pyc
+
+objective_function_api.h
+objective_function.h
+objective_function.ll
+objective_function.c
